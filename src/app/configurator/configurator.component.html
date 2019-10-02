@@ -1,0 +1,69 @@
+<h1>4Byte Konfigurator</h1>
+<p>Stelle dir jetzt deine benötige Sunset-Konfigurator zusammen.</p>
+<div>
+  <div class="flex-container outer">
+
+  <div class="flex-container">
+    <h2 class="flex-break">Stromabnehmer auswählen</h2>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Suchen" value="">
+    </mat-form-field>
+    <ng-container  *ngFor="let category of categories | async">
+      <mat-card class="card mat-elevation-z4" (click)="expand(category)"
+        [@openClose]="category == expanded ? 'open' : 'closed'">
+        <mat-card-content>
+          <mat-icon aria-hidden="false" aria-label="category.name">{{category.icon}}</mat-icon>
+          <h3>{{category.name}}</h3>
+        </mat-card-content>
+      </mat-card>
+
+      <ng-container *ngIf="category == expanded">
+        <ng-container *ngFor="let subCategory of category.subCategories">
+          <mat-card class="card mat-elevation-z4" (click)="select(subCategory)"
+            [@openClose]="subCategory == selected ? 'open' : 'closed'">
+            <mat-card-content>
+              <mat-icon aria-hidden="false" aria-label="category.name">{{subCategory.icon}}</mat-icon>
+              <h3>{{subCategory.name}}</h3>
+            </mat-card-content>
+          </mat-card>
+          <app-device-list class="sub-card" [category]="subCategory" (deviceAdded)="onDeviceAdded($event)"
+                            *ngIf="subCategory == selected"></app-device-list>
+        </ng-container>
+        <div class="flex-break divider"></div>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="flex-container">
+    <h2 class="flex-break">Aktuelle Auswahl</h2>
+    <!--
+    <mat-list role="list" *ngIf="neededTotal > 0">
+      <mat-list-item role="listitem" *ngFor="let device of configuredDevices">
+        <p>
+          <span [matBadge]="device.needed" matBadgeOverlap="false">{{device.name}}</span>
+        </p>      
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <p>
+          <span [matBadge]="neededTotal" matBadgeOverlap="false">Gesamt</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+    -->
+
+    <mat-chip-list class="mat-chip-list-stacked">
+      <mat-chip selected *ngFor="let device of configuredDevices">
+          <span>{{device.name}}: {{device.needed}}</span>
+          <mat-icon matChipRemove (click)="removeDevice(device)" class="pull-right">cancel</mat-icon>
+      </mat-chip>
+      <mat-chip color="accent">
+          <span>Gesamt: {{neededTotal}} W/h</span>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="flex-container">
+    <h2 class="flex-break">Sunset-Konfiguration</h2>
+  </div>
+</div>
+
+</div>

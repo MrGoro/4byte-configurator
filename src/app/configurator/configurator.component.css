@@ -1,0 +1,58 @@
+.full-width {
+  width: 100%;
+}
+
+.card {
+  z-index: 10;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+}
+
+.sub-card {
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+app-device-list {
+  width: 100%;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+mat-card-content {
+  justify-content: center
+}
+
+.flex-container {
+  max-width: 410px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container.outer{
+  width: 100%;
+  flex-direction: column;
+}
+
+.flex-break {
+  width: 100%;
+}
+
+.divider {
+  height: 20px;
+}
+
+.mat-chip-list-stacked {
+  width: 100%
+}
+
+mat-chip {
+  width: 100%;
+}
+
+.pull-right {
+  float: right;
+}

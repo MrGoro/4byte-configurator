@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Kühlschrank",
+    "category": 2,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Gefrierschrank",
+    "category": 2,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Kühl/Gefrierkombination",
+    "category": 2,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Herd",
+    "category": 3,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Friteuse",
+    "category": 3,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Grill",
+    "category": 3,
+    "min": 500,
+    "max": 1000
+  }, {
+    "id": 1,
+    "name": "Mikrowelle",
+    "category": 3,
+    "min": 500,
+    "max": 1000
+  }
+]

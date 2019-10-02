@@ -1,0 +1,63 @@
+[
+    {
+    "id": 1,
+    "name": "Lebensmittel",
+    "icon": "fastfood",
+    "parentCategory": -1
+  }, {
+    "id": 2,
+    "name": "Kühlung",
+    "icon": "flare",
+    "parentCategory": 1
+  }, {
+    "id": 3,
+    "name": "Kochen",
+    "icon": "offline_bolt",
+    "parentCategory": 1
+  }, {
+    "id": 4,
+    "name": "Musik",
+    "icon": "music_video",
+    "parentCategory": -1
+  }, {
+    "id": 5,
+    "name": "DJ-Setup",
+    "icon": "offline_bolt",
+    "parentCategory": 4
+  }, {
+    "id": 6,
+    "name": "Subwoofer",
+    "icon": "offline_bolt",
+    "parentCategory": 4
+  }, {
+    "id": 6,
+    "name": "Hochtöner",
+    "icon": "offline_bolt",
+    "parentCategory": 4
+  }, {
+    "id": 7,
+    "name": "weiteres",
+    "icon": "offline_bolt",
+    "parentCategory": -1
+  }, {
+    "id": 8,
+    "name": "Teil 1",
+    "icon": "offline_bolt",
+    "parentCategory": 7
+  }, {
+    "id": 9,
+    "name": "Teil 2",
+    "icon": "offline_bolt",
+    "parentCategory": 7
+  }, {
+    "id": 10,
+    "name": "Teil 3",
+    "icon": "offline_bolt",
+    "parentCategory": 7
+  }, {
+    "id": 11,
+    "name": "Teil 4",
+    "icon": "offline_bolt",
+    "parentCategory": 7
+  }
+]
