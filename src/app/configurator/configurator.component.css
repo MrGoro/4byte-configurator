@@ -10,6 +10,15 @@
   background-color: #ffffff;
 }
 
+.mat-card-header .mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mat-card-avatar {
+  width: 20px;
+}
+
 .sub-card {
   margin-top: 0px;
   padding-left: 10px;
